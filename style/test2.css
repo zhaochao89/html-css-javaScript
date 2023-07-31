@@ -1,0 +1,61 @@
+body {
+  width: 1000px;
+  border: 1px solid black;
+}
+/* 对所有div的第一个元素生效 */
+div *:first-child {
+  color: rebeccapurple;
+}
+
+/* CSS 伪类表示在一组兄弟元素中的第一个元素，对第一个div的内容生效 */
+/* div:first-child {
+  color: red;
+} */
+
+.notebox {
+  border: 4px solid #666;
+  padding: 5px;
+  margin: 10px;
+}
+/* 多个类选择器被应用指向同一个元素 */
+.notebox.warning {
+  border-color: orange;
+  font-weight: bold;
+}
+
+.notebox.danger {
+  border-color: red;
+  font-weight: bold;
+}
+
+#apple {
+  color: red;
+}
+/* 伪类以:开头，伪元素以::开头（一些早期的伪元素曾使用单冒号的语法） */
+/* 对article标签下的第一个p标签生效 */
+article p:first-child {
+  font-size: 120%;
+  font-weight: bold;
+}
+
+article p::first-line {
+  color: green;
+}
+
+article p:first-child::first-line {
+  text-decoration: underline;
+}
+/* ::before和::after配合content属性一同使用，使用 CSS 将内容插入到你的文档中中。 */
+/* ::before和::after伪元素与content属性的共同使用，在 CSS 中被叫做“生成内容”，而且你会见到这种技术被用于完成各种任务。 */
+.box::before {
+  content: "This should show before the other content. ";
+}
+/* 需要指定display: block，否则设置宽高不生效 */
+.space::before {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  background-color: purple;
+}

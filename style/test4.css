@@ -1,0 +1,38 @@
+.outside {
+  border: 1px solid black;
+}
+
+/* box-sizing: border-box;可以指定盒子的宽高为指定的宽高，否则盒子实际表现的宽高为指定的宽高+边框宽度+padding */
+.inner {
+  border: 5px solid green;
+  width: 400px;
+  height: 30px;
+  padding: 10px;
+  margin: 20px;
+  /* box-sizing: border-box; */
+}
+
+/* 外边距折叠 */
+/* 如果你有两个外边距相接的元素，这些外边距将合并为一个外边距，即最大的单个外边距的大小生效。 */
+.inner2 {
+  border: 5px solid purple;
+  width: 400px;
+  height: 30px;
+  margin-bottom: 50px;
+  border-radius: 10px;
+}
+
+.inner3 {
+  border: 5px solid blue;
+  width: 400px;
+  height: 30px;
+  margin-top: 30px;
+  border-top-right-radius: 1em 10%;
+  background: linear-gradient(
+        105deg,
+        rgba(255, 255, 255, 0.2) 39%,
+        rgba(51, 56, 57, 1) 96%
+      )
+      center center / 400px 200px no-repeat,
+    url(big-star.png) center no-repeat, rebeccapurple;
+}

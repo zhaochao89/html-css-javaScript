@@ -1,0 +1,68 @@
+/* 标签选择器  */
+html {
+  background-color: #e1ffff;
+}
+
+li {
+  /* 移除项目符号 */
+  list-style-type: none;
+  font-size: 12px;
+}
+/* 类选择器，在HTML标签中使用class=""指定 */
+.title {
+  font-size: 18px;
+}
+/* ID选择器，在HTML标签中使用id=""指定 */
+#a {
+  color: blue;
+}
+/* 只对li标签下的类选择器special生效，其他标签内的不生效*/
+/* p.special, */
+li.special {
+  color: orange;
+  font-weight: bold;
+}
+/* 后代选择器 */
+/*选择器利用空格分开，对li下的em生效  */
+li em {
+  color: rebeccapurple;
+  font-weight: bold;
+  text-decoration: underline;
+}
+p em {
+  color: blue;
+}
+/* 子代关系选择器 */
+.parent ul > li {
+  color: red;
+}
+
+.content,
+.part {
+  color: antiquewhite;
+  font-size: 28px;
+}
+/* 相邻选择符，邻接兄弟选择器 */
+/* 对和h1相邻的第一个p标签生效，并且h1和p标签要在同一个层级 */
+h1 + p {
+  font-size: 50%;
+  color: red;
+}
+
+a:link {
+  color: pink;
+}
+
+a:visited {
+  color: green;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+div .special {
+  color: yellow;
+  background-color: black;
+  padding: 5px;
+}

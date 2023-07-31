@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>开始学习 CSS</title>
+    <!-- 链接CSS样式表，引入外部样式表 -->
+    <!-- 用属性 rel，让浏览器知道有 CSS 文档存在（所以需要遵守 CSS 样式的规定），并利用属性 href 指定，寻找 CSS 文件的位置 -->
+    <link href="../style/style.css" rel="stylesheet"/>
+    <!-- 这是内部样式表-->
+    <style>
+        .inner {
+            font-size: 28px;
+            color: purple;
+        }
+    </style>
+  </head>
+  <body>
+    <h1>我是一级标题</h1>
+    <p>
+      这是一个段落文本。在文本中有一个 <span>span element</span> 并且还有一个
+      <a href="http://example.com">链接</a>.
+    </p>
+
+    <p class="special">这是第二段。包含了一个 <em>强调</em> 元素。</p>
+
+    <ul>
+      <li>项目 1</li>
+      <li class="special">项目 2</li>
+      <li><em>项目 三</em></li>
+    </ul>
+    <p class="content">
+        <p class="part">这是第一段内容</p>
+        <p>这是第二段内容</p>
+    </p>
+    <p class="part">这是在内容外</p>
+    <div>
+        ——————————这是分割线——————————
+        <p>这是分割线下面的文字，这个<em class="special">字</em>比较特殊。</p>
+    </div>
+    <p class="inner">
+        这段文字使用内部样式表控制
+    </p>
+    <p style="color: aqua; font-size:medium;">
+        这是内联样式
+    </p>
+    <div class="parent">
+      <ul>
+        <li>测试子代关系选择器一</li>
+        <li>测试子代关系选择器二</li>
+        <li>测试子代关系选择器三
+          <ol>
+            <li>item1</li>
+            <li>item2</li>
+          </ol>
+        </li>
+      </ul>
+    </div>
+  </body> 
+</html>

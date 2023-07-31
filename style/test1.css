@@ -1,0 +1,60 @@
+.content {
+  width: 800px;
+  border: 1px solid black;
+  padding: 16px;
+}
+.title {
+  color: purple;
+  font-family: cursive;
+  border-bottom: 3px dotted purple;
+}
+.subtitle {
+  font-size: 28px;
+  color: gray;
+}
+.paragraph {
+  font-size: 20px;
+  color: #333333;
+}
+/* 伪元素 */
+.paragraph::first-letter {
+  font-size: 40px;
+}
+.contact {
+  font-size: 24px;
+  font-style: italic;
+}
+li {
+  font-size: large;
+}
+/* 伪类 */
+a:hover {
+  text-decoration: none;
+}
+/* .email {
+  color: green;
+} */
+/* 运算符选择器：会对li下第一层级所有的a标签样式生效 */
+li > a {
+  color: green;
+}
+.web {
+  color: red;
+}
+.contact-box {
+  border: 5px solid purple;
+  background-color: lightgrey;
+}
+/* 标签属性选择器 */
+a[title] {
+  font-size: 30px;
+}
+
+a[href="http://example.com"]
+{
+  font-size: 22px;
+}
+/* 全局选择器 */
+/* * {
+  margin: 0px;
+} */
