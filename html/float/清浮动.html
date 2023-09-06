@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>清浮动</title>
+    <!-- 浮动会导致元素脱标，不再向父元素汇报高度，会导致父元素的高度坍塌；解决父元素的坍塌问题叫清浮动 -->
+    <style>
+        .container {
+            border: solid 1px #ddd;
+            width: 300px;
+            /*1、将父元素也设置为浮动——不推荐 */
+            /* float: left; */
+            /* 2、设置display为inline-block，inline-table等——不推荐*/
+            /* display: inline-table; */
+            /* 3、设置position为absolute，fixed——不推荐*/
+            /* position: fixed; */
+        }
+        /* 4、在container内最后面添加一个空的div，设置clear为both——不推荐 */
+        .space {
+            clear: both;
+        }
+        /* 终极解决方案，纯CSS——适用现在流行的浏览器 */
+        .container::after {
+            content: '';
+            /* 必须是块级元素才生效 */
+            display: block;
+            clear: both;
+        }
+
+        /* 适配旧的浏览器的写法 */
+        /* .container::after {
+            content: '';
+            display: block;
+            clear: both;
+            height: 0;
+            visibility: hidden;
+        }
+        .container {
+            zoom: 1;
+        } */
+        
+        .box1 {
+            background-color: #f00;
+            width: 100px;
+            height: 100px;
+            float: left;
+        }
+
+        .box2 {
+            background-color: #0f0;
+            width: 100px;
+            height: 130px;
+            float: right;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="box1">
+            box1
+        </div>
+        <div class="box2">
+            box2
+        </div>
+        <!-- <div class="space"></div> -->
+        <!-- 5、添加一个br，设置clear属性为all——不推荐 -->
+        <!-- <br clear="all"> -->
+    </div>
+    <div>1234567</div>
+</body>
+</html>

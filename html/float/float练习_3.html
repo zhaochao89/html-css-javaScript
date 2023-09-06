@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浮动元素</title>
+    <style>
+        /* 重置样式 CSS reset */
+        ul, li, h2 {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            color: #000;
+            text-decoration: none;
+        }
+        /* 布局样式 */
+        a:hover {
+            color: #00f;
+        }
+        .box {
+            border: solid 1px #ddd;
+            width: 700px;
+            height: 30px;
+            margin: 0 auto;
+        }
+
+        .box h2 {
+            float: left;
+            font-weight: 400;
+            font-size: 30px;
+            line-height: 30px;
+        }
+
+        .box ul {
+            float: left;
+            margin-top: 8px;
+            margin-left: 20px;
+        }
+
+        .box li {
+            float: left;
+            margin-right: 10px;
+        }
+
+        .box .rank {
+            float: right;
+        }
+        .box .rank::before {
+            content: url('../../imgs/sort.png');
+            width: 15px;
+            height: 15px;
+            display: inline;
+        }
+        .box .underline {
+            width: 15px;
+            height: 2px;
+            display: none;
+            background-color: #00f;
+            border-radius: 5px;
+            margin: 0 auto;
+        }
+        .box .title:hover .underline {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2>
+            <a href="#">剧集 &gt;</a>
+        </h2>
+        <ul>
+            <li class="title">
+                <a href="#">大陆剧</a>
+                <span class="underline"></span>
+            </li>
+            <li class="title">
+                <a href="#">港台剧</a>
+                <span class="underline"></span>
+            </li>
+            <li class="title">
+                <a href="#">美剧</a>
+                <span class="underline"></span>
+            </li>
+            <li class="title">
+                <a href="#">印度剧</a>
+                <span class="underline"></span>
+            </li>
+        </ul>
+        <a class="rank" href="#">剧集排行</a>
+    </div>
+</body>
+</html>

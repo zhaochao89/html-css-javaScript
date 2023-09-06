@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浮动元素</title>
+    <style>
+        .top-box {
+            background-color: #ddd;
+            width: 300px;
+            height: 200px;
+        }
+        .div1 {
+            background-color: #f0f;
+            width: 100px;
+            height: 100px;
+            float: left;
+            /* dev1左浮动后，脱标不占用空间，dev2才会上去 */
+        }
+
+        .div2 {
+            background-color: #0f0;
+            width: 100px;
+            height: 100px;
+            float: right;
+        }
+
+        .box {
+            border: solid 1px #ddd;
+            width: 300px;
+            height: 300px;
+            margin-top: 20px;
+        }
+        .box img {
+            height: 80px;
+            float: left;
+            margin: 0;
+        }
+        p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-box">
+        <div class="div1">div1</div>
+        <div class="div2">div2</div>
+    </div>
+
+    <div class="box">
+        <img src="../../imgs/chris.jpg"/>
+        <p>开头这是一段介绍文字这是一段介绍文字这是一段介绍文字这是一段介绍文字这是一段介绍文字这是一段介绍文字</p>
+    </div>
+</body>
+</html>
