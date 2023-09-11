@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>清浮动</title>
     <!-- 浮动会导致元素脱标，不再向父元素汇报高度，会导致父元素的高度坍塌；解决父元素的坍塌问题叫清浮动 -->
+    <!-- 清浮动技术：父元素算高度时会将浮动元素的高度也算进去，但是绝对定位和固定定位的脱标元素高度不会算进去。 -->
     <style>
         .container {
             border: solid 1px #ddd;

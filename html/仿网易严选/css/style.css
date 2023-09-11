@@ -1,0 +1,157 @@
+/* 网站导航 */
+.site-nav {
+    background-color: #333;
+    height: 36px;
+    /*line-height与height设置一样，让内容垂直居中*/
+    line-height: 36px;
+}
+
+.site-nav a {
+    color: #ccc;
+    font-size: 12px;
+}
+
+.site-nav a:hover {
+    color: #fff;
+}
+
+.site-nav .slogan {
+    float: left;
+    margin-right: 30px;
+}
+
+.site-nav .notice-list {
+    float: left;
+    background: url('../images/notice.png') no-repeat left center;
+    padding-left: 26px;
+    height: 36px;
+    overflow: hidden;
+}
+
+.site-nav .notice-list ul {
+    position: relative;
+    top: 0;
+}
+
+.site-nav .notice-list li {
+    line-height: 36px;
+}
+
+.site-nav .notice-list a {
+    text-decoration: underline;
+    color: #b4a078;
+}
+
+.site-nav .notice-list a:hover {
+    text-decoration: none;
+    color: #fff;
+}
+
+.site-nav .item {
+    /* 消除class为item的a标签之前的间距 */
+    float: left;
+}
+
+.site-nav .item.login {
+    margin-right: 20px;
+}
+
+.site-nav .divider {
+    width: 1px;
+    height: 16px;
+    background-color: #5c5c5c;
+    float: left;
+    margin: 10px 10px;
+}
+
+.site-nav .download-app::before {
+    content: '';
+    margin-right: 5px;
+    background: url('../images/icon-yxtop.png') no-repeat 0 0;
+    /* 设置成block，宽高才生效 */
+    display: inline-block;
+    height: 11px;
+    width: 7px;
+    vertical-align: middle;
+}
+
+.site-nav .service::after {
+    content: '';
+    display: inline-block;
+    background: url('../images/icon-yxtop.png') no-repeat 0 -690px;
+    height: 5px;
+    width: 11px;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+.site-nav .service:hover::after {
+    transform: rotate(180deg);
+}
+
+.site-nav .enterprise::after {
+    content: '';
+    display: inline-block;
+    height: 5px;
+    width: 11px;
+    background: url('../images/icon-yxtop.png') no-repeat 0 -690px;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+.site-nav .enterprise:hover::after {
+    transform: rotate(180deg);
+}
+/* 分类导航 */
+.func-nav .logo {
+    background: url('../images/icon-yxtop.png') no-repeat 0 -298px;
+    height: 60px;
+    width: 212px;
+    margin: 24px auto;
+}
+
+.func-nav .logo a {
+    display: block;
+    height: 60px;
+    /* 隐藏文字显示 */
+    font-size: 0;
+}
+
+.func-nav .buy-car {
+    position: absolute;
+    right: 0;
+    width: 34px;
+    height: 32px;
+    float: right;
+}
+
+.func-nav .buy-car .car {
+    position: absolute;
+    background: url('../images/icon-yxtop.png') 0 -204px no-repeat;
+    width: 24px;
+    height: 24px;
+    left: 0;
+    bottom: 0;
+}
+
+.func-nav .buy-car:hover .car {
+    background-position: 0 -80px;
+}
+
+.func-nav .buy-car .count  {
+    position: absolute;
+    background: url('../images/icon-yxtop.png') 0 -51px no-repeat;
+    width: 19px;
+    height: 19px;
+    color: #fff;
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+    top: 0;
+    right: 0;
+}
+
+.func-nav .search {
+    position: absolute;
+    right: 50px;
+}

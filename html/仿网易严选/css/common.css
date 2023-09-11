@@ -1,0 +1,15 @@
+
+/* 每一行内容 */
+.row {
+    position: relative;
+    width: 1090px;
+    margin: 0 auto;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
