@@ -153,5 +153,35 @@
 
 .func-nav .search {
     position: absolute;
-    right: 50px;
+    right: 40px;
+    top: 95px;
+
+}
+
+.func-nav .search input {
+    color: #333;
+    border: none;
+    width: 252px;
+    border-bottom: 1px solid #d8ceb5;
+    height: 22px;
+    line-height: 22px;
+}
+
+.func-nav .search .placeholder {
+    position: absolute;
+    left: 10px;
+    top: 2px;
+    color: #999;
+}
+
+.func-nav .search .button {
+    background: url('../images/icon-yxtop.png') no-repeat 0 -602px;
+    width: 20px;
+    height: 20px;
+    float: right;
+    cursor: pointer;
+}
+
+.func-nav .search .button:hover {
+    background-position: 0 -542px;
 }
