@@ -18,3 +18,11 @@ body {
 .right {
     float: right;
 }
+
+.icon-yxtop, 
+.site-nav .enterprise::after,
+.site-nav .service::after,
+.site-nav .download-app::before
+ {
+    background-image: url('../images/icon-yxtop.png');
+}

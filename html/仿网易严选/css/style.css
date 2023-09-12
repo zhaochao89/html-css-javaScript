@@ -67,7 +67,7 @@
 .site-nav .download-app::before {
     content: '';
     margin-right: 5px;
-    background: url('../images/icon-yxtop.png') no-repeat 0 0;
+    background-position: 0 0;
     /* 设置成block，宽高才生效 */
     display: inline-block;
     height: 11px;
@@ -78,7 +78,7 @@
 .site-nav .service::after {
     content: '';
     display: inline-block;
-    background: url('../images/icon-yxtop.png') no-repeat 0 -690px;
+    background-position: 0 -690px;
     height: 5px;
     width: 11px;
     vertical-align: middle;
@@ -94,7 +94,7 @@
     display: inline-block;
     height: 5px;
     width: 11px;
-    background: url('../images/icon-yxtop.png') no-repeat 0 -690px;
+    background-position: 0 -690px;
     vertical-align: middle;
     margin-left: 5px;
 }
@@ -104,7 +104,7 @@
 }
 /* 分类导航 */
 .func-nav .logo {
-    background: url('../images/icon-yxtop.png') no-repeat 0 -298px;
+    background-position: 0 -298px;
     height: 60px;
     width: 212px;
     margin: 24px auto;
@@ -127,7 +127,7 @@
 
 .func-nav .buy-car .car {
     position: absolute;
-    background: url('../images/icon-yxtop.png') 0 -204px no-repeat;
+    background-position: 0 -204px;
     width: 24px;
     height: 24px;
     left: 0;
@@ -140,7 +140,7 @@
 
 .func-nav .buy-car .count  {
     position: absolute;
-    background: url('../images/icon-yxtop.png') 0 -51px no-repeat;
+    background-position: 0 -51px;
     width: 19px;
     height: 19px;
     color: #fff;
@@ -175,7 +175,7 @@
 }
 
 .func-nav .search .button {
-    background: url('../images/icon-yxtop.png') no-repeat 0 -602px;
+    background-position: 0 -602px;
     width: 20px;
     height: 20px;
     float: right;
