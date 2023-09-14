@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>网易严选 - 以严谨的态度，为中国消费者甄选天下优品</title>
     <link rel="icon" href="./images/favicon.ico">
+    <link rel="stylesheet" href="./css/clear-fix.css">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/style.css">
@@ -12,7 +13,7 @@
 <body>
     <div id="header">
         <div class="site-nav">
-            <div class="row">
+            <div class="row clear-fix">
                 <div class="left">
                     <a href="#" class="slogan">好的生活，没那么多贵</a>
                     <div class="notice-list">
@@ -41,6 +42,7 @@
             </div>
         </div>
         <div class="func-nav">
+            <!-- 子元素都是用了绝对定位脱标了，所以row的高度不会自动计算 -->
             <div class="row">
                 <!-- h1中添加一个文字，方便搜索引擎能搜索到 -->
                 <h1 class="logo icon-yxtop"><a href="#">网易严选</a></h1>
@@ -53,10 +55,44 @@
                     <i class="car icon-yxtop"></i>
                     <i class="count icon-yxtop">9</i>
                 </a>
+                <ul class="category">
+                    <li class="category-item"><a href="#">首页</a></li>
+                    <li class="category-item"><a href="#">居家生活</a></li>
+                    <li class="category-item"><a href="#">宠物生活</a></li>
+                    <li class="category-item"><a href="#">服饰鞋包</a></li>
+                    <li class="category-item"><a href="#">美食酒水</a></li>
+                    <li class="category-item"><a href="#">个护清洁</a></li>
+                    <li class="category-item"><a href="#">母婴亲子</a></li>
+                    <li class="category-item"><a href="#">运动旅行</a></li>
+                    <li class="category-item"><a href="#">数码家电</a></li>
+                    <li class="category-item"><a href="#">严选全球</a></li>
+                    <li class="category-item divider"></li>
+                    <li class="category-item"><a href="#">为你严选</a></li>
+                    <li class="category-item"><a href="#">众筹</a></li>
+                </ul>
             </div>
         </div>
     </div>
-    <div id="main"></div>
+    <div id="main">
+        <div class="slider">
+            <ul class="image-list">
+                <li><img src="./images/slider_01.jpeg" alt=""></li>
+                <li><img src="./images/slider_02.jpeg" alt=""></li>
+                <li><img src="./images/slider_03.jpeg" alt=""></li>
+                <li><img src="./images/slider_04.jpeg" alt=""></li>
+                <li><img src="./images/slider_05.jpeg" alt=""></li>
+            </ul>
+            <button class="arrow pre"></button>
+            <button class="arrow next"></button>
+            <ul class="page-list">
+                <li><button></button></li>
+                <li><button></button></li>
+                <li><button></button></li>
+                <li><button></button></li>
+                <li><button></button></li>
+            </ul>
+        </div>
+    </div>
     <div id="footer"></div>
 </body>
 </html>

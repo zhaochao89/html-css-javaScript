@@ -26,3 +26,11 @@ body {
  {
     background-image: url('../images/icon-yxtop.png');
 }
+
+a {
+    color: #333;
+}
+
+a:hover {
+    color: #CC9756;
+}
