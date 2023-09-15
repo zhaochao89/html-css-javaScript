@@ -279,6 +279,7 @@
     right: 0;
     margin: 0 auto;
     text-align: center;
+    /* background-color: #f0f; */
 }
 
 .page-list li {
@@ -288,6 +289,7 @@
 }
 
 .page-list button {
+    /* 设置为block，是为了不让button和li的vertical-align混淆在一起 */
     display: block;
     box-sizing: border-box;
     width: 12px;
@@ -300,7 +302,8 @@
     margin-top: 3px;
 }
 
-.page-list button:hover {
+.page-list button:hover, 
+.page-list .active button {
     background-color: transparent;
     border: 3px solid #b4a078;
     box-shadow: 0 0 0 4px #dfcea9;
