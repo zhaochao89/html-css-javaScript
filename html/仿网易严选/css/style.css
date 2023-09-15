@@ -253,6 +253,10 @@
     background-color: #CC9756;
 }
 
+.slider {
+    position: relative;
+}
+
 .slider .pre {
     position: absolute;
     background-position: 0 -5438px;
@@ -267,3 +271,37 @@
     top: 210px;
 }
 /* page control */
+.page-list {
+    position: absolute;
+    bottom: 10px;
+    width: 200px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.page-list li {
+    display: inline-block;
+    /* vertical-align只对行内级元素有效，所有会影响下面的button，要将下面button设置为block */
+    vertical-align: middle;
+}
+
+.page-list button {
+    display: block;
+    box-sizing: border-box;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 12px;
+    border: none;
+    background-color: #babbba;
+    cursor: pointer;
+    margin-top: 3px;
+}
+
+.page-list button:hover {
+    background-color: transparent;
+    border: 3px solid #b4a078;
+    box-shadow: 0 0 0 4px #dfcea9;
+}
