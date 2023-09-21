@@ -34,3 +34,11 @@ a {
 a:hover {
     color: #CC9756;
 }
+
+.img-scale img {
+    transition: transform 1s;
+}
+
+.img-scale:hover img {
+    transform: scale(1.05);
+}

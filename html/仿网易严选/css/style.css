@@ -308,3 +308,51 @@
     border: 3px solid #b4a078;
     box-shadow: 0 0 0 4px #dfcea9;
 }
+/* 品牌制造商 */
+.brand {
+    margin-top: 30px;
+}
+
+.brand .header {
+    margin-bottom: 12px;
+}
+
+.header .title {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1;
+    margin-right: 20px;
+}
+
+.header .more {
+    /* 行内级元素a标签设置有浮动，否则margin-top不生效 */
+    float: right;
+    margin-top: 13px;
+}
+
+.content .item {
+    background-color: #f4f4f4;
+}
+
+.content .item.large {
+    float: left;
+    height: 320px;
+    width: 357px;
+    margin-right: 9px;
+}
+
+.content .item.small {
+    float: left;
+    height: 155px;
+    width: 357px;
+}
+
+.content .last {
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.content .last img {
+    height: 155px;
+    width: 357px;
+}
