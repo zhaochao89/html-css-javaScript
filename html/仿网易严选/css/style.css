@@ -240,15 +240,6 @@
     top: 0;
 }
 
-.arrow {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: url('../images/icon_common.png') #E7E2D7;
-    border: none;
-    cursor: pointer;
-}
-
 .arrow:hover {
     background-color: #CC9756;
 }
@@ -259,14 +250,12 @@
 
 .slider .pre {
     position: absolute;
-    background-position: 0 -5438px;
     left: 32px;
     top: 210px;
 }
 
 .slider .next {
     position: absolute;
-    background-position: 0 -5658px;
     right: 32px;
     top: 210px;
 }
@@ -284,7 +273,7 @@
 
 .page-list li {
     display: inline-block;
-    /* vertical-align只对行内级元素有效，所有会影响下面的button，要将下面button设置为block */
+    /* vertical-align只对行内级元素有效，所以会影响下面的button，要将下面button设置为block */
     vertical-align: middle;
 }
 
@@ -313,11 +302,12 @@
     margin-top: 30px;
 }
 
-.brand .header {
+.header {
     margin-bottom: 12px;
 }
 
 .header .title {
+    display: inline;
     font-size: 28px;
     font-weight: 700;
     line-height: 1;
@@ -355,4 +345,68 @@
 .content .last img {
     height: 155px;
     width: 357px;
+}
+
+/* 新品首发 */
+
+.product {
+    margin-top: 20px;
+}
+
+ul {
+    display: flex;
+    overflow: scroll;
+    position: relative;
+}
+
+.content li {
+    width: 265px;
+}
+
+.content .tag {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #a7936e;
+    border: 1px solid #b3a07d;
+    background-color: #f4f0ea;
+    border-radius: 5px;
+    padding: 0 4px;
+    font-size: 12px;
+    line-height: 20px;
+    height: 20px;
+}
+
+.content .description {
+    padding: 0 48px;
+    text-align: center;
+}
+
+.content .productname {
+    margin-bottom: 4px;
+    color: #333;
+    font-size: 100%;
+    font-weight: bold;
+}
+
+.content .description span:nth-of-type(1) {
+    color: #f00;
+    margin-right: 2px;
+}
+
+.content .description span:nth-of-type(2) {
+    text-decoration: line-through;
+    color: #999;
+}
+
+.product .arrow.pre {
+    position: absolute;
+    left: 32px;
+    top: 50%;
+}
+
+.product .arrow.next {
+    position: absolute;
+    right: 32px;
+    top: 50%;
 }
