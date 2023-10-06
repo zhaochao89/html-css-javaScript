@@ -348,19 +348,20 @@
 }
 
 /* 新品首发 */
-
 .product {
     margin-top: 20px;
+    margin-bottom: 32px;
 }
 
-ul {
+.product ul {
     display: flex;
-    overflow: scroll;
+    overflow: auto;
     position: relative;
 }
 
 .content li {
     width: 265px;
+    margin-right: 8px;
 }
 
 .content .tag {
@@ -378,7 +379,7 @@ ul {
 }
 
 .content .description {
-    padding: 0 48px;
+    padding: 0 48px 8px;
     text-align: center;
 }
 
@@ -401,12 +402,47 @@ ul {
 
 .product .arrow.pre {
     position: absolute;
-    left: 32px;
+    left: -64px;
     top: 50%;
 }
 
 .product .arrow.next {
     position: absolute;
-    right: 32px;
+    right: -64px;
     top: 50%;
+}
+
+.product .item {
+    position: relative;
+}
+
+.product .content .cover {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+}
+
+.product .content .item:hover .cover {
+    display: block;
+}
+
+.product .content .item:hover {
+    background-color: #f4f0ea;
+    box-shadow: 1px 1px 4px rgb(0,0,0,.2);
+}
+
+.shuma ul {
+    float: right;
+    line-height: 44px;
+    margin-right: 12px;
+}
+
+.shuma ul li {
+    margin-right: 10px;
+    float: left;
+}
+
+.shuma .content {
+    margin-top: -12px;
 }
