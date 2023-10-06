@@ -446,3 +446,8 @@
 .shuma .content {
     margin-top: -12px;
 }
+
+.shuma .content a {
+    display: block;
+    height: 310px;
+}
