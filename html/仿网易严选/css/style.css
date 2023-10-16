@@ -511,3 +511,118 @@
     color: #333;
     font-size: 13px;
 }
+
+.footer {
+    display: flex;
+    padding-top: 60px;
+    padding-bottom: 34px;
+}
+
+.footer .kehu {
+    text-align: center;
+    flex: 1;
+}
+
+.footer .kehu-title {
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.footer .kehu-item {
+    display: inline-flex;
+    width: 80px;
+    height: 100px;
+    border: 1px solid #E8E8E8;
+    margin-right: 29px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer .kehu-item i {
+    display: block;
+    background-image: url('../images/icon-yxfoot.png');
+}
+
+.footer .kehu-item .online-kefu {
+    background-position: 0 -290px;
+    height: 26px;
+    width: 31px;
+    margin-bottom: 10px;
+}
+
+.footer .kehu-item:hover .online-kefu {
+    background-position: 0 -254px;
+}
+
+.footer .kehu-item .feedback {    
+    background-position: 0 -97px;
+    height: 27px;
+    width: 30px;
+    margin-bottom: 10px;
+}
+
+.footer .kehu-item:hover .feedback {
+    background-position: 0 -60px;
+}
+
+.footer .attent {
+    flex: 1;
+    padding-left: 37px;
+    padding-right: 37px;
+}
+
+.footer .attent-des {
+    font: 12px / 1.5 "Microsoft Yahei", 微软雅黑, verdana;
+    color: #333;
+    line-height: 18px;
+    margin-bottom: 22px;
+}
+
+.footer .attent-item {
+    display: inline-block;
+    background-image: url('../images/icon-yxfoot.png');
+    width: 32px;
+    height: 32px;
+}
+
+.footer .attent-rows {
+    display: flex;
+    align-items: center;
+}
+
+.footer .attent-item.weibo {
+    background-position: 0 -326px;
+}
+
+.footer .attent-item.weixin {
+    background-position: 0 -428px;
+    margin: 0 16px;
+}
+
+.footer .attent-item.douyin {
+    background-position: 0 -470px;
+}
+
+.footer .attent .kehu-subtitle {
+    display: inline-block;
+    height: 32px;
+    line-height: 32px;
+    margin-right: 16px;
+}
+
+.footer .download {
+    flex: 1;
+    text-align: center;
+}
+
+.footer .download img {
+    width: 104px;
+    height: 104px;
+    margin-bottom: 8px;
+}
+
+.footer .download-des {
+    color: #b4a078;
+}
