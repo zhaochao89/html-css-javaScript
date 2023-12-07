@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promise</title>
+  </head>
+  <body>
+    <script>
+      /*
+      一、Promise有三种状态：1、pending(准备，待解决，进行中) 2、fulfilled(已完成，成功) 3、rejected(已拒绝，失败)。
+      二、Promise状态的改变是一次性的。
+      三、Promise的状态不改变，不会执行then里的方法。
+      */
+      const p = new Promise((resolve, reject) => {
+        //resolve()：成功函数，调用函数，使当前Promise对象的状态改变成fulfilled
+        //reject()：失败函数，调用函数，使当前Promise对象的状态改变成rejected
+        //通过调用resolve和reject函数，传递参数，改变当前Promise对象的结果
+        //resolve("成功的结果"); //resolve相当于是这个函数(value) => {console.log("成功时调用", value);}，"成功的结果"就是函数调用的参数，传递给了value，所以在下面函数中打印value可以直接得到这里的数据
+        // reject("失败的结果");
+        // console.log(a);
+        throw new Error("出错了");
+      });
+      /*
+      1、当Promise的状态改成rejected时被执行
+      2、当Promise执行体中的代码出错时catch可以捕获到
+      3、如果then中写了失败时调用的方法，catch写在then后就不能捕获到异常
+      */
+      p.catch((reason) => {
+        console.log("catch到失败了：", reason);
+      });
+      //Promise原型对象方法then，有两个参数，两个参数都是函数，返回值是一个新的Promise对象，状态是pending。
+      const t = p
+        .then(
+          //promise对象状态是fulfilled时执行
+          (value) => {
+            // 在then方法 的参数函数中，通过形参使用Promise对象的结果
+            console.log("成功时调用", value);
+
+            //如果这里的代码出错，会将t实例的状态改变成rejected。
+            console.log(a);
+
+            //使用return可以将t实例的状态改成fulfilled
+            return 123;
+          },
+          //promise对象状态是rejected时执行
+          (reason) => {
+            console.log("失败时调用", reason);
+            //使用return可以将t实例的状态改成rejected
+            return "失败了啊";
+          }
+        )
+        .then(
+          (value) => {
+            console.log(value);
+            return value;
+          },
+          (reason) => {
+            console.log(reason);
+            return reason;
+          }
+        )
+        .then(
+          (value) => {
+            console.log(value);
+          },
+          (reason) => {
+            console.log(reason);
+          }
+        )
+        //写在then后面的捕获不到，如果把上面所有then中失败时的方法去掉，这里就可以捕获到了。
+        .catch((reason) => {
+          console.log("最后的捕获：", reason);
+        });
+      console.log(t);
+    </script>
+  </body>
+</html>

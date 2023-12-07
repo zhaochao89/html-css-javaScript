@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promise常用的写法</title>
+  </head>
+  <body>
+    <script>
+      new Promise((resolve, reject) => {
+        resolve("成功了");
+        // reject("失败了哦");
+      })
+        .then((value) => {
+          console.log(value);
+          var id = 124;
+          //键和值字段一样时，可以这样简写
+          test({ id });
+        })
+        .catch((reason) => {
+          console.log(reason);
+        });
+
+      function test(data) {
+        console.log(data.id);
+      }
+    </script>
+  </body>
+</html>
