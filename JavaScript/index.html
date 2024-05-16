@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preload" href="./index.js" as="script" />
     <title>Document</title>
     <!-- 
         script元素的属性 
@@ -27,8 +28,15 @@
     ></script>
     <!-- 嵌入行内JavaScript代码 -->
     <script>
+      /*动态加载脚本：
+        以这种方式获取的资源对浏览器预加载器是不可见的。这会严重影响它们在资源获取队列中的优先级。
+        根据应用程序的工作方式以及怎么使用，这种方式可能会严重影响性能。要想让预加载器知道这些动态请求文件的存在，可以在文档头部显式声明它们:
+        <link rel="preload" href="./index.js">
+    */
+      // 这种方式创建的<script>元素默认是以异步方式加载的
       let script = document.createElement("script");
       script.src = "./index.js";
+      script.async = false; //默认为true，表示是异步加载的；设置为false，表示该脚本是同步加载的
       document.head.appendChild(script);
 
       function sayHi() {
